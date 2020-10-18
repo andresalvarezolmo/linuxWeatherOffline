@@ -1,0 +1,36 @@
+body{
+    /* background: #343a40; */
+    background: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#loginDetails{
+    margin: 0 auto;
+    width: 20%;
+}
+
+#loginButton{
+    width: 100%;
+}
+/* #LoginLabel{
+    color: aliceblue;
+    margin: 0 auto;
+} */
+
+input::placeholder{
+    text-align:center;
+    /* line-height:50px; */
+}
+
+@media (max-width : 500px) {
+    #loginDetails{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .navbar-brand{
+        font-size: 16px;
+    }
+}

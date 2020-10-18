@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Webpage Icon -->
+    <link rel="icon" href="img/icon.png">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/styles.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="topnav-left">
+            <a class="navbar-brand" href="/">
+                <img src="img/icon.png" style="max-width: 60px;">
+            </a>
+            <a class="navbar-brand" href="/">WeatherApp</a>
+        </div>
+        <div class="topnav-right">
+            <a class="navbar-brand" href="login">Sign in</a>
+            <a class="navbar-brand" href="signup">Sign up</a>
+        </div>
+    </nav>
+    <br>
+    <!-- Search bar and buttons -->
+    <div class="text-center">
+        <label for="city">City:</label>
+        <input type="text" class="" id="city">
+        <br><br>
+        <button type="button" class="btn btn-light" onclick="">Look for a place</button>
+        <button type="button" class="btn btn-danger" onclick="">Clear weather log</button>
+        <hr>
+    </div>
+    <br>  
+    <!-- Weather Cards -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 d-flex justify-content-center" id="weatherCard">
+                <div id="info">
+                    <img src='https://www.countryflags.io/es/flat/64.png' alt="">
+                    <p>A Coruna</p>
+                </div>
+                <div id="info">
+                    <img src='img/sun.png' alt="">
+                    <p>19°C</p>
+                </div>
+                <div id="info">
+                    <img src='img/wind.png' alt="">
+                    <p>10km/h</p>
+                </div>
+                <div id="info">
+                    <img src='img/rain.png' alt="">
+                    <p>30%</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-12 d-flex justify-content-center" id="weatherCard">
+                <div id="info">
+                    <img src='https://www.countryflags.io/es/flat/64.png' alt="">
+                    <p>Mao</p>
+                </div>
+                <div id="info">
+                    <img src='img/sun.png' alt="">
+                    <p>25°C</p>
+                </div>
+                <div id="info">
+                    <img src='img/wind.png' alt="">
+                    <p>6km/h</p>
+                </div>
+                <div id="info">
+                    <img src='img/rain.png' alt="">
+                    <p>5%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

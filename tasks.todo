@@ -1,0 +1,13 @@
+✔ Verify city entered via request to weather API @done (8/17/2020, 11:59:21 PM)
+✔ Display user's cities @done (9/5/2020, 5:28:18 PM)
+✔ Changing images depending on weather @done (9/28/2020, 5:05:48 PM)
+☐ Reorganize folder layout
+☐ Password constraints
+☐ Flash message for inexistent cities/duplicated
+✔ Redirect http://localhost:3000/auth/signup when signed in @done (10/5/2020, 11:35:41 PM)
+✔ Encrypt passwords with bcrypt @done (9/29/2020, 4:50:00 PM)
+✔ Delete button @done (9/20/2020, 8:02:14 PM)
+✔ http://localhost:3000/auth @done (8/18/2020, 12:20:27 AM)
+✔ Redesing database so more than one user can have the same city @done (8/29/2020, 10:03:34 AM)
+✔ punch bjarne @done (9/21/2020, 6:29:54 PM)
+☐ If user is logged in when you delete from the database you can not desearilze and the page crashes when looking for the previous stored cookie

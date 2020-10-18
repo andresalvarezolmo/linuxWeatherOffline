@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Webpage Icon -->
+    <link rel="icon" href="img/icon.png">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/styles.css'>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet"></head>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark">
+        <div class="topnav-left">
+            <a class="navbar-brand" href="/">
+                <img src="../img/icon.png" style="max-width: 60px;" class="icon">
+            </a>
+            <a class="navbar-brand" href="">WeatherApp</a>
+        </div>
+        <div class="topnav-right">
+            <a class="navbar-brand" href="/auth/logout">Logout</a>
+
+        </div>
+    </nav>
+    <br>
+    <div class="text-center">
+        <% if (user) { %>
+        <h4>Welcome:</h4>
+        <h4><%= user.username %></h4>
+        <% } else { %>
+        <h4>No user is logged in</h4>
+        <% } %>
+        <form action="/profile/add" method="POST">
+            <label for="cityName">City:</label>
+            <input type="text" name="cityInput" class="cityInput">
+            <input type="submit" class="btn btn-primary" value="Search">
+        </form>
+    </div>
+    <br><hr><br>
+    <div class="container">
+        <div class="row">
+            <% if(locations.list){ %>
+                <% for(i=0; i<locations.list.length; i++){ %>
+                    <!-- Country -->
+                    <div class="col-lg-6 col-sm-12 justify-content-center" id="card">
+                        <div id="info">
+                            <img src="https://www.countryflags.io/<%= locations.list[i].sys.country %>/flat/64.png" id="flag">
+                            <p><%= locations.list[i].name %></p>
+                        </div>
+                        <!-- Type of weather -->
+                        <div id="info">
+                            <% if(locations.list[i].weather[0].main == 'Clouds'){%> 
+                                <img src="../img/weather/clouds.png" alt="">
+                            <% } %> 
+                            <% if(locations.list[i].weather[0].main == 'Clear'){%> 
+                                <img src="../img/weather/clear.png" alt="">
+                            <% } %> 
+                            <% if(locations.list[i].weather[0].main == 'Mist'){%> 
+                                <img src="../img/weather/mist.png" alt="">
+                            <% } %> 
+                            <% if(locations.list[i].weather[0].main == 'Haze'){%> 
+                                <img src="../img/weather/haze.png" alt="">
+                            <% } %> 
+                            <% if(locations.list[i].weather[0].main == 'Fog'){%> 
+                                <img src="../img/weather/fog.png" alt="">
+                            <% } %> 
+                            <% if(locations.list[i].weather[0].main == 'Rain'){%> 
+                                <img src="../img/weather/rain.png" alt="">
+                            <% } %> 
+                            <p><%= locations.list[i].weather[0].main %></p>
+                        </div>
+                        <!-- Temperature -->
+                        <div id="info">
+                            <img src="../img/temp.png" alt="">
+                            <p><%= locations.list[i].main.temp %>°</p>
+                        </div>
+                        <!-- Humidity -->
+                        <div id="info">
+                            <img src="../img/humidity.png" alt="">
+                            <p><%= locations.list[i].main.humidity %>%</p>
+                        </div>
+                        <!-- Wind speed -->
+                        <div id="info">
+                            <img src="../img/wind.png" alt="">
+                            <p><%= locations.list[i].wind.speed %> km/h</p>
+                        </div>
+                        <!-- Delete button -->
+                        <form action="/profile/delete" method="POST">
+                        <input type="hidden" value="<%= locations.list[i].id %>" name="deletedCity">
+                        <input type="submit" class="btn btn-danger" value="Delete" >
+                        </form>
+                    </div>
+                    <% } %>
+            <% } %>  
+        </div>
+
+    </div>
+</body>
+
+</html>

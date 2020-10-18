@@ -1,0 +1,45 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.18.0",
+    "npm": "6.14.8"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-mysql-session": "^2.1.4",
+    "express-session": "^1.17.1",
+    "fetch": "^1.1.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "req-flash": "0.0.3",
+    "serve-favicon": "^2.5.0",
+    "whatwg-fetch": "^3.3.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xDrews/weatherApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xDrews/weatherApp/issues"
+  },
+  "homepage": "https://github.com/xDrews/weatherApp#readme",
+  "description": ""
+}

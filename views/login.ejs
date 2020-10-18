@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Login
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Webpage Icon -->
+    <link rel="icon" href="img/icon.png">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/login.css'>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet"></head>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark">
+        <div class="topnav-left">
+            <a class="navbar-brand" href="../">
+                <img src="../img/icon.png" style="max-width: 60px;">
+            </a>
+            <a class="navbar-brand" href="/">WeatherApp</a>
+        </div>
+        <div class="topnav-right">
+            <a class="navbar-brand" href="/auth/signup">Sign up</a>
+        </div>
+    </nav>
+    <br><br><br><br><br><br><br>
+    <form action="/auth/login" method="POST" id="loginDetails">
+        <div class="form-group">
+            <h2>Log in</h2>
+            <!-- <label for="Details" id="LoginLabel">Please enter your log in details</label> -->
+            <input type="text" name="username" class="form-control" id="inputUsername" placeholder=Username>
+            <input type="password" name="password" class="form-control" id="inputPassword" placeholder=Password>
+            <div>
+                <p id="wrongCredentials" style="display: none;">Please enter valid credentials</p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="loginButton">Log In</button>
+    </form>
+</body>
+</html>

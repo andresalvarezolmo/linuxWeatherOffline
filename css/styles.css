@@ -1,0 +1,52 @@
+body{
+    /* background: #343a40; */
+    background: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    width: 48px;
+}
+hr{
+    width: 80%;
+    border-color: #ccc;
+}
+input
+{
+    border-radius: 25px;
+    border: 1px solid grey;
+    padding: 8px; 
+    
+}
+.icon{
+    width: 60px;
+}
+#info{
+    margin: auto;
+}
+#card{
+    display: flex;
+}
+.button{
+    text-align: center;
+    display: inline-block;
+}
+
+@media screen and (max-width: 470px) {
+    body{
+        font-size: small;
+    }
+    img{
+        width: 32px;
+    }
+    .navbar-brand{
+        font-size: 16px;
+    }
+    .cityInput{
+        width: 200px;
+    }
+    #introductoryText{
+        margin: 10%;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Webpage Icon -->
+    <link rel="icon" href="img/icon.png">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/styles.css'>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet"></head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark">
+        <div class="topnav-left">
+            <a class="navbar-brand" href="/">
+                <img src="../img/icon.png" style="max-width: 60px;" class="icon">
+            </a>
+            <a class="navbar-brand" href="">WeatherApp</a>
+        </div>
+        <div class="topnav-right">
+            <% if (user) { %>
+                <a class="navbar-brand" href="/profile">My profile: <%= user.username %></a>
+                <a class="navbar-brand" href="/auth/logout">Logout</a>
+            <% } else { %>
+                <a class="navbar-brand" href="/auth/login">Log in</a>
+                <a class="navbar-brand" href="/auth/signup">Sign up</a>            
+                <% } %> 
+        </div>
+    </nav>
+    <br>
+    <div class="text-center">
+        <br><br><br><br><br><br><br>
+        <h2>WeatherApp 1.0</h2>
+        <p id="introductoryText">Please log in or create an account, if you dont have one to start looking for places</p>
+        <a href="/auth/login" class="btn btn-primary" role="button">Login</a>
+        <a href="/auth/signup" class="btn btn-success" role="button">Sign up</a>
+
+
+    </div>
+</body>
+
+</html>
+
+
