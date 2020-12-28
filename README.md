@@ -10,5 +10,7 @@ To run on your computer
     database: 'weatherapp'
     });
     ```
-  - Install npm packages: # npm init
+  - Init npm project: # npm init
+  - Install npm needed dependencies: # npm install
   - Init server: # nodemon
+  - Access server at: http://localhost:3000/
